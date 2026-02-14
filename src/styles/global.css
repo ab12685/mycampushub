@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+  background: #f5f6fa;
+  color: #0f172a;
+}
+
+.container {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.outline-btn {
+  border: 2px solid #cbd5e1;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: white;
+  font-weight: 600;
+}
