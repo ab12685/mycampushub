@@ -1,0 +1,266 @@
+/* Global Theme */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2b1055, #7597de);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Container */
+
+.container {
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+
+h1 {
+  font-size: 28px;
+  color: white;
+  letter-spacing: 1px;
+  animation: slideDown 0.6s ease;
+}
+
+/* Navigation */
+
+nav {
+  margin: 25px 0;
+}
+
+nav a {
+  margin: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #e0c3fc;
+}
+
+/* Page / Card */
+
+.page {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  animation: fadeUp 0.6s ease;
+  transition: 0.4s ease;
+}
+
+.page:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+  display: block;
+  width: 80%;
+  margin: 12px auto;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 2px #c084fc;
+}
+
+/* Premium Buttons */
+
+button {
+  background: white;
+  color: #5b21b6;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 30px;
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* Button Hover Effect */
+
+button:hover {
+  background: #7c3aed;
+  color: white;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.5);
+}
+
+/* Glow Ripple Effect */
+
+button::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.3);
+  top: -10%;
+  left: -10%;
+  transform: scale(0);
+  transition: 0.4s ease;
+  border-radius: 50%;
+}
+
+button:hover::before {
+  transform: scale(1);
+  opacity: 0;
+}
+
+/* Star Rating */
+
+.stars {
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+.star {
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.3s ease;
+}
+
+.star:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.star.active {
+  opacity: 1;
+  color: #e0c3fc;
+  transform: scale(1.15);
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Three dots */
+.three-dots {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+  color: white;
+}
+
+.three-dots:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown */
+.menu-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 180px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: purple;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
